@@ -430,7 +430,7 @@ console.log(result18);
 //Match Non-Whitespace Characters - \S
 let sample1 = "Whitespace is important in separating words";
 let countNonWhiteSpace = /\S/g; 
-let result19 = sample.match(countNonWhiteSpace);
+let result19 = sample1.match(countNonWhiteSpace);
 console.log(result19);
 
 //Specify Upper and Lower Number of Matches - {3,6}
@@ -443,3 +443,24 @@ let haStr = "Hazzzzzzzzzzzzzzzzzzzzzzzzzzah";
 let haRegex = /Haz{4,}ah/;
 let result21 = haRegex.test(haStr);
 console.log(result21);
+
+//Specify Exact Number of Matches - {3}
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; 
+let result22 = timRegex.test(timStr);
+
+//Check for All or None - ? - saying the previous element is optional
+let favWord = "favorite";
+let favRegex = /favou?rite/; 
+let result23 = favRegex.test(favWord);
+
+//Positive and Negative Lookahead
+//A positive lookahead (?=...) - search pattern is there, but won't actually match it
+//A negative lookahead  (?!...) - make sure the element in the search pattern is not there
+
+//Check For Mixed Grouping of Characters = ()
+
+let testStr1 = "Pumpkin";
+let testRegex1 = /P(engu|umpk)in/;
+let result24 = testRegex1.test(testStr1);
+
